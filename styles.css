@@ -1,0 +1,788 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem; /* this property is for:  */
+    scroll-behavior: smooth;
+    list-style: none; /* removes the dots from the UL elements*/
+    text-decoration: none;
+   
+}
+
+:root { /* these are global variables decleared inside of the :root selector */
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --third-color: #f9cb45;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d,#ffac38 );
+ } 
+
+/* Custom scroll bar */
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+   background: var(--main-color);
+   border-radius: 5rem;
+}
+
+section{
+    padding: 50px 100px;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000; /*  The z-index property specifies the stack order of an element. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 5px 100px;
+    height: 70px;
+}
+.sp2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #444;
+}
+.sp1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001; /*An element with greater stack order is always in front of an element with a lower stack order.*/
+    display: none;
+}
+.nav-bar {
+display: flex;
+max-height: 50px;
+}
+.nav-bar li{
+position: relative;  /* so the nav bar hover affect can work */
+}
+.nav-bar a{
+ size: 1rem;
+  padding: 10px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+ /* for the bottom inline  effect */
+.nav-bar a::after {
+content: "";
+width: 0;
+height: 3px;
+background: var(--gradient);
+position: absolute;
+bottom: -4px;
+left: 0;
+transition: 0.5s;
+}
+.nav-bar a:hover::after{
+    width: 100%;
+}
+
+/* for the bottom inline  effect */
+.flag {
+    width: 28px;
+    margin-right: 5px;
+    position: relative;
+    top: 6px;
+    
+}
+
+#selectLang {
+    padding: 0 20px;
+    border-radius: 15px;
+    border: 2px solid ;
+    position: relative;
+    bottom: 3px;
+}
+#selectLang option {
+    background-color: #fff;
+
+    
+}
+
+
+
+ /****************** home section ******************************/
+#home {
+    max-width: 100vw;
+    min-height: 100vh;
+  
+}
+.text {
+ position: relative;
+ top: 180px;
+}
+.bigSpan {
+    font-size: 4rem;
+    color: #fe5b3d;
+    position: relative;
+    right: 46px;
+    display: block;
+}
+.smallSpan {
+    color: #fe5b3d;
+    font-weight: 600; 
+}
+.spanBr {
+    display: block;
+    margin: 0;
+}
+.text h2 {
+
+    font-size: 4rem;
+    position: relative;
+    left: 50px;
+}
+.text p {
+    position: relative;
+    left: 5px;
+}
+
+.blob {
+    position: absolute;
+    top: 180px;
+    right: 25px;
+    width: 700px
+ } /* blob first was right 25 and top 180 */
+.orangeCar {
+    width: 600px;
+    position: absolute;
+    right: 60px;
+    top: 270px;
+} /* car first was right 35 and width: 500px */
+
+.buttons {
+    position: absolute;
+    top: 500px;
+    left: 248px;
+}
+.socialMedia i{
+    font-size: 2rem;
+    padding-left: 10px;
+    cursor: pointer;
+    
+}
+.socialMedia i:hover{
+   color: var(--main-color);
+   transform: rotate(20deg);
+   transition: 0.6s;
+}
+.buttons a{
+    color: #fff;
+    background-color: #fe5b3d;;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    left: 30px;
+    top: 25px;
+    font-weight: 600;
+}
+.buttons a:hover {
+    background-color: #444;
+    color: #eeeff1;
+    transition: 0.6s;
+}
+
+ /****************** about us section ******************************/
+
+ #AboutUs {
+     width: 100%;
+     min-height:60vh ;
+     margin-top: 400px;
+ }
+ hr {
+     width: 20vw;
+     border: 3px solid #fe5b3d;
+     border-radius: 15px;
+     margin: auto ;
+ }
+ .aboutusdiv {
+     margin-top: 100px;
+   
+ }
+ .picNtext img{
+  height: 600px;
+  width: 500px;
+
+
+ }
+ .aboutustext p {
+    position: relative;
+    left: 10px;
+}
+ .picNtext h2{
+   font-size: 3rem;
+   position: relative;
+   bottom: 20px;
+    
+     }
+     .us{
+        color: var(--main-color);
+         
+          }
+
+          .picNtext span {
+            color: var(--main-color);
+            font-weight: 600;
+          }
+
+ .aboutustext {
+     width: 350px;
+     margin-left: 50px;
+ }
+ .picNtext{
+     display: flex;
+     flex-wrap: wrap;
+     /* justify-content: space-between; */
+ }
+ 
+
+  /****************** Services section ******************************/
+
+  #Services {
+      margin-top: 50px;
+      width: 100%;
+      min-height: 95vh;
+  }
+  .servicesHeader, .contactHeader {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5rem;
+}
+.servicesHeader span, .contactHeader span{
+    color: var(--main-color);
+}
+  .boxesContainer {
+      margin-top: 150px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .car {
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+    transition: 0.3s;
+    margin: 0 10px;
+
+  }
+  .car img {
+     width: 80%;
+      border-radius: 15px;
+      padding-left: 5px;
+      padding-top: 10px;
+  }
+  .car h3, .car p {
+      margin-left: 5%;
+      padding-bottom: 10px;
+  }
+  .car span {
+      color: var(--main-color);
+      font-weight: 600;
+  }
+  .rentBtnDiv {
+      display: flex;
+      justify-content: center;
+  }
+ .rentBtnDiv a {
+     margin-top: 10px;
+     color: #eeeff1;
+     background-color: #444;
+   padding: 5px 60px;
+    text-align: center;
+    border-radius: 15px;
+    white-space: nowrap;
+ }
+ .rentBtnDiv a:hover {
+     background-color: var(--main-color);
+     transition: 0.7s;
+ }
+.day {
+    color: #444 !important;
+}
+#lastCar {
+    display: none;
+}
+.leftArrow, .rightArrow {
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+  align-items: center;
+}
+.leftArrow:hover, .rightArrow:hover {
+  color: var(--main-color);
+  transition: 0.7s;
+}
+
+
+   /****************** Contact us section ******************************/
+ 
+   #ContactUs {
+       width: 100%;
+       min-height: 90vh;
+   }
+  
+    .contactContainer {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 150px;
+        padding-right: 150px;
+       
+     }
+  
+    .form {
+        width: 400px;
+        height: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+       border-radius: 15px;
+    }
+    .form-contact {
+        display: flex;
+        justify-content: center; 
+        flex-direction: column;
+
+    }
+    .form-contact input {
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 2px solid black;
+        text-align: center;
+        outline: none;
+    }
+    .form-contact textarea {
+        border: none;
+        border-bottom: 2px solid black;
+        text-align: center;
+        height: 50px;
+        resize: none;
+        outline: none;
+    
+    }
+    .form a {
+
+        text-align: center;
+        margin-top: 50px;
+        background-color: #fe5b3d;
+        border-radius: 15px;
+        color: #eeeff1;
+        font-weight: 600;
+    }
+    .form a:hover {
+        background-color: #444;
+        transition: 0.7s;
+    }
+   
+    .icons {
+        width: 300px;
+        height: 400px;
+  
+         display: flex;
+        justify-content: center;
+         flex-direction: column;
+    } 
+    .icons i{
+        font-size: 2.5rem;
+        margin: 30px 10px;
+        color: var(--main-color);
+    }
+    .icons h3 {
+    display: inline-block;
+     position: relative;
+     bottom: 10px;
+    }
+
+    /* .icons h3 {
+        display: inline-block;
+    } */
+   /****************** footer ******************************/
+
+   #footer {
+       min-height: 5vh;
+       background-color: #444;
+   }
+   .copyRight {
+       color: #eeeff1;
+       position: relative;
+       top: 10px;
+   }
+   .copyRight a{
+    color: #eeeff1;
+}
+.copyRight i{
+    position: relative;
+    top: 1.5px;
+}
+.copyRight i:hover {
+    color: #fe5b3d;
+}
+.copyRight a:hover {
+    color: #fe5b3d;
+}
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1002; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #eeeff1; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    padding-left: 20px;
+    display: none;
+    flex-direction: column;
+    border: none;
+    border-right: 2px solid #444;
+
+  }
+  .sidenav a {
+    color: #444;
+    font-weight: 600;
+    font-size:  1.2rem;
+    padding-bottom: 30px;
+   
+  }
+  .sideLogo{
+    margin-bottom: 100px;
+   font-size: 1.5rem;
+  }
+  .sideLogo span{
+    color: var(--main-color);
+  }
+  .sideLogos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+  }
+  .sideLogos  i {
+    font-size: 1.6rem;
+    padding-right: 20px;
+  }
+
+ /* making the website responsive */
+
+ /************************************** for avearage phones ***************************************/
+
+ @media (max-width: 500px) {
+
+    header {
+         width: 100%;
+         padding-left: 5px;
+         padding-right: 20px;
+    }
+
+    .sp1, .sp2 {
+        font-size: 1.2rem;
+    }
+    #menu-icon {
+        display: initial;
+        position: absolute;
+        top: 25px;
+        left: 88px;
+
+    }
+    .nav-bar {
+        display: none;
+    }
+    
+    
+  /* --------------------------------------------- home section ---------------------------------------- */
+
+    .blob {
+        position: absolute;
+        top: 180px;
+        right: 10px;
+        width: 100%;
+        max-width: 500px;
+    }
+    .orangeCar {
+        width: 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 10px;
+        top: 180px;
+        
+    }
+    .text {
+        position: relative;
+        top: 400px;
+    }
+    .bigSpan {
+        display: inline-block;
+        right: 0;
+        font-size: 2.5rem;
+        text-align: center;
+       
+    }
+    .text h2 {
+        left: -100px;
+        font-size: 2.5rem;
+        width: 100vw;
+        text-align: center;
+        
+      
+    }
+    .text p {
+        /* text-align: center; */
+        margin: 0 auto;
+        margin-bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+    .spanBr{
+        display: inline-block;
+    }
+    hr {
+
+       width: 42vw;
+      margin-left: 10px;
+    }
+  
+    .buttons {
+
+        top: 650px;
+        left: 33%;
+        margin: 0 auto;
+    } 
+    .firstHr {
+        margin-top: 40px;
+        width: 50vw;
+    }
+    /* --------------------------------------------- about us section ---------------------------------------- */
+    .picNtext img {
+        width: 300px;
+        height: 400px;
+     margin-bottom: 20px;
+    }
+    .picNtext {
+        display: flex;
+        justify-content: center;
+    }
+    .aboutustext {
+        margin-left: -40px;
+        width: 100vw;
+    }
+    .aboutustext p {
+        width: 100%;
+    }
+
+
+      /* --------------------------------------------- services section ---------------------------------------- */
+       .boxesContainer {
+           display: flex;
+           justify-content: center;
+       }
+      .car {
+        margin-bottom: 20px;
+        height: 300px;
+        padding: 0 40px;
+        text-align: left;
+     }
+     
+
+     .rentBtnDiv a {
+        padding: 5px 80px;
+        text-align: center;
+      
+     }
+     [num = "2"],   [num = "2"],   [num = "3"],   [num = "4"] {
+        display: none;
+     }
+     .leftArrow {
+        margin-bottom: 5px;
+        display: none;
+
+     }
+      /* --------------------------------------------- contact section ---------------------------------------- */
+     .contactContainer {
+       padding-right: 0 ;
+       padding-left: 0;
+       display: flex;
+       justify-content: center;
+     }
+     .form {
+        padding: 0 40px;
+     }
+    
+     .icons {
+        padding:  0 50px;
+        position: relative;
+        right: 30px;
+     }
+    .gmail{
+        width: 270px;
+    } 
+
+   
+
+ }
+ /************************************** for phones with small screens (-386)***************************************/
+ @media (max-width: 386px){
+     .text h2, .bigSpan {
+         font-size: 2rem;
+         text-align: center;
+         
+     }
+ }
+
+  /************************************** for ipads ***************************************/ 
+  /* 500+ , max     1200 */
+  @media (max-width: 1205px) and (min-width: 500px){
+    header {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 20px;
+   }
+
+   .sp1, .sp2 {
+       font-size: 1.2rem;
+   }
+   #menu-icon {
+       display: initial;
+       position: absolute;
+       top: 25px;
+       left: 88px;
+
+   }
+   .nav-bar {
+       display: none;
+   }
+   
+   
+ /* --------------------------------------------- home section ---------------------------------------- */
+
+   .blob {
+       position: absolute;
+       top: 130px;
+      
+       width: 100%;
+       max-width: 500px;
+       left: 50%;
+       transform: translate(-50%, 0);
+   }
+   .orangeCar {
+       width: 100%;
+       max-width: 500px;
+       position: absolute;
+      
+       top: 180px;
+       left: 50%;
+       transform: translate(-50%, 0);
+       
+   }
+   .text {
+       position: relative;
+       top: 400px;
+   }
+   .bigSpan {
+       display: inline-block;
+       right: 0;
+       font-size: 2.5rem;
+       text-align: center;
+      
+   }
+   .text h2 {
+       left: -100px;
+       font-size: 2.5rem;
+       width: 100vw;
+       text-align: center;
+       
+     
+   }
+   .text p {
+       /* text-align: center; */
+       margin: 0 auto;
+       margin-bottom: 50px;
+       width: 100%;
+       text-align: center;
+   }
+   .spanBr{
+       display: inline-block;
+   }
+
+   .buttons {
+
+       top: 620px;
+       left: 50%;
+       transform: translate(-50%, 0);
+   } 
+   .firstHr {
+       margin-top: 40px;
+   }
+    /* --------------------------------------------- about us section ---------------------------------------- */
+   
+    .picNtext {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         flex-direction: column;
+         margin: 0 auto;
+    }
+
+     .aboutustext {
+        margin-top: 20px;
+    }
+
+    .picNtext img {
+        width: 400px;
+        height: 500px;
+     margin-bottom: 20px;
+    }
+  /* --------------------------------------------- services section ---------------------------------------- */
+    .boxesContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .car {
+        margin-bottom: 10px;
+    }
+     /* --------------------------------------------- contact section ---------------------------------------- */
+     .contactContainer {
+        padding-right: 0 ;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form {
+         padding: 0 40px;
+      }
+     
+      .icons {
+         padding:  0 50px;
+         position: relative;
+         right: 30px;
+      }
+     .gmail{
+         width: 270px;
+     } 
+  }
