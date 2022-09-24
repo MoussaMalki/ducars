@@ -21,7 +21,7 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo">
+      <a href="#Home" class="logo">
         <span class="sp1">DU</span> <span class="sp2">Cars</span>
       </a>
 
@@ -55,15 +55,6 @@
 
       <!-- buttons -->
 
-      <div class="buttons">
-        <div class="socialMedia">
-          <i class="bx bxl-facebook"></i>
-          <i class="bx bxl-whatsapp"></i>
-          <i class="bx bxl-instagram"></i>
-        </div>
-        <a class="rentnow" href="#ContactUs">Rent Now</a>
-      </div>
-
       <!-- text + btn  -->
 
       <div class="text">
@@ -80,6 +71,15 @@
           <span class="smallSpan">Morocco</span> you have came to the
           <span class="smallSpan">right place</span>
         </p>
+        <div class="buttons">
+          <a class="rentnow" href="#ContactUs">Rent Now</a>
+
+          <div class="socialMedia">
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-whatsapp"></i>
+            <i class="bx bxl-instagram"></i>
+          </div>
+        </div>
       </div>
     </section>
     <section id="AboutUs">
@@ -134,7 +134,9 @@
           />
           <h3>Peugeot 208</h3>
           <p><span class="price">40$</span> <span class="day">/day</span></p>
-          <div class="rentBtnDiv"><a href="" class="carBtn"> Rent Now</a></div>
+          <div class="rentBtnDiv">
+            <a href="#ContactUs" class="carBtn"> Rent Now</a>
+          </div>
         </div>
         <div class="car" num="2">
           <img
@@ -144,7 +146,9 @@
           />
           <h3>Dacia sandero</h3>
           <p><span class="price">40$</span> <span class="day">/day</span></p>
-          <div class="rentBtnDiv"><a href="" class="carBtn"> Rent Now</a></div>
+          <div class="rentBtnDiv">
+            <a href="#ContactUs" class="carBtn"> Rent Now</a>
+          </div>
         </div>
         <div class="car" num="3">
           <img
@@ -154,14 +158,18 @@
           />
           <h3>Sandero stepway</h3>
           <p><span class="price">40$</span> <span class="day">/day</span></p>
-          <div class="rentBtnDiv"><a href="" class="carBtn"> Rent Now</a></div>
+          <div class="rentBtnDiv">
+            <a href="#ContactUs" class="carBtn"> Rent Now</a>
+          </div>
         </div>
 
         <div class="car" id="lastCar" num="4">
           <img src="images/logan.png" alt="dacia logan gris" />
           <h3>Dacia logan</h3>
           <p><span class="price">40$</span> <span class="day">/day</span></p>
-          <div class="rentBtnDiv"><a href="" class="carBtn"> Rent Now</a></div>
+          <div class="rentBtnDiv">
+            <a href="#ContactUs" class="carBtn"> Rent Now</a>
+          </div>
         </div>
         <div class="rightArrow">
           <i class="bx bx-right-arrow-circle"></i>
@@ -175,14 +183,14 @@
       <div class="contactContainer">
         <div class="form">
           <form
-            action="https://formsubmit.co/moussawebdev@email.com"
+            action="https://formspree.io/f/xgeqagba"
             method="POST"
             class="form-contact"
           >
             <input type="text" name="name" placeholder="Name" required />
             <input type="email" name="email" placeholder="Email" required />
             <textarea
-              name=""
+              name="message"
               id=""
               cols="22"
               rows="5"
@@ -190,7 +198,7 @@
               required
             ></textarea>
 
-            <a class="send" href=""> Send </a>
+            <button type="submit" class="send">Send</button>
           </form>
         </div>
 
@@ -220,17 +228,12 @@
       <a href="#Services" class="sideServ">Services</a>
 
       <a href="#ContactUs" class="sideContact">Contact Us</a>
-
-      <div class="sideLogos">
-        <i class="bx bxl-facebook"></i>
-        <i class="bx bxl-whatsapp"></i>
-        <i class="bx bxl-instagram"></i>
-      </div>
     </div>
 
     <footer id="footer">
       <div class="copyRight">
-        <i class="bx bxl-instagram"></i> <a href="">Moussa Malki</a> ©
+        <i class="bx bxl-instagram"></i>
+        <a href="http://singular-mooncake-805f78.netlify.app">Moussa Malki</a> ©
       </div>
     </footer>
 

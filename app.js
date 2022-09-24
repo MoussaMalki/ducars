@@ -288,21 +288,21 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(`.text`, { delay: 200, origin: `top` });
-sr.reveal(`.blob`, { delay: 300, origin: `right`, distance: `10px` });
+sr.reveal(`.blob`, { delay: 300, origin: `top` });
 sr.reveal(`.orangeCar`, { delay: 500, origin: `top` });
 sr.reveal(`.buttons`, { delay: 600, origin: `left` });
 
-sr.reveal(`.aboutUsPic`, { delay: 500, origin: `left`, distance: `80px` });
+sr.reveal(`.aboutUsPic`, { delay: 500, origin: `top`, distance: `80px` });
 sr.reveal(`.aboutustext`, {
   delay: 700,
-  origin: `right`,
+  origin: `bottom`,
   distance: `80px`,
 });
 
 sr.reveal(`.car`, { delay: 500, origin: `top` });
 
-sr.reveal(`.form`, { delay: 500, origin: `left` });
-sr.reveal(`.icons`, { delay: 600, origin: `right`, distance: `20px` });
+sr.reveal(`.form`, { delay: 500, origin: `top` });
+sr.reveal(`.icons`, { delay: 600, origin: `bottom` });
 
 // sr.reveal(`.carCollection`, { delay: 700, origin: `top` });
 
@@ -415,4 +415,14 @@ if (mediaQuery.matches) {
   };
 }
 
-// ==================> for cars slideshow (Ipad) <=====================
+let socials = doc.querySelector(`.socialMedia`).children;
+
+socials[0].onclick = () => {
+  location.href = `https://www.facebook.com/Dusseldolf-Cars-107057262077768`;
+};
+socials[1].onclick = () => {
+  location.href = `https://wa.me/+212611742301`;
+};
+socials[2].onclick = () => {
+  location.href = `https://www.instagram.com/du_cars7/`;
+};

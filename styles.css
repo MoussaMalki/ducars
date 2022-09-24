@@ -18,7 +18,7 @@
     --main-color: #fe5b3d;
     --second-color: #ffac38;
     --third-color: #f9cb45;
-    --text-color: #444;
+    --text-color: #1b1b1b;
     --gradient: linear-gradient(#fe5b3d,#ffac38 );
  } 
 
@@ -54,7 +54,7 @@ header {
 .sp2{
     font-size: 1.5rem;
     font-weight: 600;
-    color: #444;
+    color: #1b1b1b;
 }
 .sp1 {
     font-size: 1.5rem;
@@ -129,7 +129,10 @@ transition: 0.5s;
 .text {
  position: relative;
  top: 180px;
+ left: 2%;
+ display: inline-block;
 }
+
 .bigSpan {
     font-size: 4rem;
     color: #fe5b3d;
@@ -154,31 +157,30 @@ transition: 0.5s;
 .text p {
     position: relative;
     left: 5px;
+    margin-bottom: 40px;
 }
 
 .blob {
     position: absolute;
     top: 180px;
-    right: 25px;
-    width: 700px
+    right: 0%;
+    width: 100%;
+    max-width: 43rem;
  } /* blob first was right 25 and top 180 */
 .orangeCar {
-    width: 600px;
+    width: 100%;
+    max-width: 40rem;
     position: absolute;
-    right: 60px;
+    right: 2%;
     top: 270px;
 } /* car first was right 35 and width: 500px */
 
-.buttons {
-    position: absolute;
-    top: 500px;
-    left: 248px;
-}
+
 .socialMedia i{
     font-size: 2rem;
     padding-left: 10px;
     cursor: pointer;
-    
+    color: --ma;
 }
 .socialMedia i:hover{
    color: var(--main-color);
@@ -187,18 +189,22 @@ transition: 0.5s;
 }
 .buttons a{
     color: #fff;
-    background-color: #fe5b3d;;
-    padding: 10px;
+    background-color: #1b1b1b;;
+    padding: 10px 20px;
     border-radius: 15px;
-    position: relative;
-    left: 30px;
-    top: 25px;
     font-weight: 600;
+    position: relative;
+    left: 130px;
 }
 .buttons a:hover {
-    background-color: #444;
+   
     color: #eeeff1;
     transition: 0.6s;
+}
+.socialMedia {
+    position: relative;
+    left: 115px;
+    margin-top: 20px;
 }
 
  /****************** about us section ******************************/
@@ -207,6 +213,7 @@ transition: 0.5s;
      width: 100%;
      min-height:60vh ;
      margin-top: 400px;
+     padding: 50px 0 !important;
  }
  hr {
      width: 20vw;
@@ -216,11 +223,10 @@ transition: 0.5s;
  }
  .aboutusdiv {
      margin-top: 100px;
-   
  }
  .picNtext img{
   height: 600px;
-  width: 500px;
+  width: 400px;
 
 
  }
@@ -245,13 +251,16 @@ transition: 0.5s;
           }
 
  .aboutustext {
-     width: 350px;
-     margin-left: 50px;
+     width: 100%;
+     max-width: 20rem;
  }
  .picNtext{
      display: flex;
      flex-wrap: wrap;
-     /* justify-content: space-between; */
+     justify-content: space-around;
+     align-items: center;
+     padding: 5vh 16vw;
+     width: 100%;
  }
  
 
@@ -260,7 +269,8 @@ transition: 0.5s;
   #Services {
       margin-top: 50px;
       width: 100%;
-      min-height: 95vh;
+      min-height: 60vh;
+      padding: 50px 0 !important;
   }
   .servicesHeader, .contactHeader {
     text-align: center;
@@ -275,7 +285,8 @@ transition: 0.5s;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
+    
   }
   .car {
     width: 300px;
@@ -283,7 +294,7 @@ transition: 0.5s;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
     transition: 0.3s;
-    margin: 0 10px;
+    margin: 0 1vw;
 
   }
   .car img {
@@ -307,7 +318,7 @@ transition: 0.5s;
  .rentBtnDiv a {
      margin-top: 10px;
      color: #eeeff1;
-     background-color: #444;
+     background-color: #1b1b1b;
    padding: 5px 60px;
     text-align: center;
     border-radius: 15px;
@@ -318,7 +329,7 @@ transition: 0.5s;
      transition: 0.7s;
  }
 .day {
-    color: #444 !important;
+    color: #1b1b1b !important;
 }
 #lastCar {
     display: none;
@@ -339,21 +350,22 @@ transition: 0.5s;
  
    #ContactUs {
        width: 100%;
-       min-height: 90vh;
+       min-height: 60vh;
+       padding: 50px 0 !important;
    }
   
     .contactContainer {
         margin-top: 100px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        padding-left: 150px;
-        padding-right: 150px;
-       
+        padding: 0 16vw;
+        
      }
   
     .form {
-        width: 400px;
+        width: 96%;
+        max-width: 400px;
         height: 400px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
         display: flex;
@@ -382,7 +394,7 @@ transition: 0.5s;
         outline: none;
     
     }
-    .form a {
+    .send {
 
         text-align: center;
         margin-top: 50px;
@@ -390,9 +402,11 @@ transition: 0.5s;
         border-radius: 15px;
         color: #eeeff1;
         font-weight: 600;
+        border: none;
+        padding: 2px 0;
     }
-    .form a:hover {
-        background-color: #444;
+    .send:hover {
+        background-color: #1b1b1b;
         transition: 0.7s;
     }
    
@@ -422,7 +436,7 @@ transition: 0.5s;
 
    #footer {
        min-height: 5vh;
-       background-color: #444;
+       background-color: #1b1b1b;
    }
    .copyRight {
        color: #eeeff1;
@@ -456,7 +470,7 @@ transition: 0.5s;
     display: none;
     flex-direction: column;
     border: none;
-    border-right: 2px solid #444;
+    border-right: 2px solid #1b1b1b;
 
   }
   .sidenav a {
@@ -522,6 +536,15 @@ transition: 0.5s;
         width: 100%;
         max-width: 500px;
     }
+    .buttons  {
+        text-align: center; 
+       }
+       .buttons a {
+        left: 0;
+       }
+       .socialMedia {
+        left: 0;
+       }
     .orangeCar {
         width: 100%;
         max-width: 500px;
@@ -533,6 +556,7 @@ transition: 0.5s;
     .text {
         position: relative;
         top: 400px;
+        display: block;
     }
     .bigSpan {
         display: inline-block;
@@ -562,15 +586,10 @@ transition: 0.5s;
     hr {
 
        width: 42vw;
-      margin-left: 10px;
+      margin: auto;
     }
   
-    .buttons {
-
-        top: 650px;
-        left: 33%;
-        margin: 0 auto;
-    } 
+    
     .firstHr {
         margin-top: 40px;
         width: 50vw;
@@ -586,14 +605,13 @@ transition: 0.5s;
         justify-content: center;
     }
     .aboutustext {
-        margin-left: -40px;
         width: 100vw;
     }
     .aboutustext p {
         width: 100%;
     }
-
-
+   
+   
       /* --------------------------------------------- services section ---------------------------------------- */
        .boxesContainer {
            display: flex;
@@ -655,6 +673,7 @@ transition: 0.5s;
   /************************************** for ipads ***************************************/ 
   /* 500+ , max     1200 */
   @media (max-width: 1205px) and (min-width: 500px){
+    
     header {
         width: 100%;
         padding-left: 5px;
@@ -700,6 +719,8 @@ transition: 0.5s;
    .text {
        position: relative;
        top: 400px;
+       display: block;
+    
    }
    .bigSpan {
        display: inline-block;
@@ -723,16 +744,21 @@ transition: 0.5s;
        width: 100%;
        text-align: center;
    }
+   .buttons  {
+    text-align: center; 
+   }
+   .buttons a {
+    left: 0;
+   }
+   .socialMedia {
+    left: 0;
+   }
    .spanBr{
        display: inline-block;
    }
 
-   .buttons {
-
-       top: 620px;
-       left: 50%;
-       transform: translate(-50%, 0);
-   } 
+  
+  
    .firstHr {
        margin-top: 40px;
    }
@@ -751,7 +777,7 @@ transition: 0.5s;
     }
 
     .picNtext img {
-        width: 400px;
+        width: 350px;
         height: 500px;
      margin-bottom: 20px;
     }
@@ -785,4 +811,29 @@ transition: 0.5s;
      .gmail{
          width: 270px;
      } 
+  }
+
+  /* big ass screens */
+
+
+  @media (min-width: 1600px){
+    
+    .blob {
+        right: 10%;
+    }
+    .orangeCar {
+        right: 13%;
+    }
+    .text {
+        left: 13%;
+
+        display: inline-block;
+    }
+    .picNtext {
+        padding: 5vh 26vw;
+    }
+    .contactContainer  {
+        padding: 0 26vw;
+    }
+
   }
