@@ -129,6 +129,7 @@ function spanishSwitch() {
   for (i = 0; i < days.length; i++) {
     days[i].textContent = "/día";
     carBtn[i].textContent = `alquilar`;
+    doc.querySelectorAll(`.price`)[i].textContent = `30€`;
   }
 
   // ====> contact
@@ -191,6 +192,7 @@ function arabicSwitch() {
   for (i = 0; i < days.length; i++) {
     days[i].textContent = "/يوم";
     carBtn[i].textContent = ` كــراء الان`;
+    doc.querySelectorAll(`.price`)[i].textContent = `300DH`;
   }
 
   // ====> contact
@@ -244,6 +246,7 @@ function englishSwitch() {
   for (i = 0; i < days.length; i++) {
     days[i].textContent = "/day";
     carBtn[i].textContent = `Rent Now`;
+    doc.querySelectorAll(`.price`)[i].textContent = `30$`;
   }
   // ====> contact
 
@@ -347,17 +350,42 @@ let leftArrow = doc.querySelector(".leftArrow");
 let righttArrow = doc.querySelector(".rightArrow");
 
 window.onload = () => {
-  doc.querySelector("#lastCar").setAttribute("src", "images/logan.png");
+  doc.querySelector("#lastCar2").setAttribute("src", "images/logan.png");
 };
+window.acc2 = 1;
 
 leftArrow.onclick = () => {
-  doc.querySelector("#firstCar").style.cssText = " display: initial;";
-  doc.querySelector("#lastCar").style.cssText = "display: none";
+  acc2 -= 1;
+  righttArrow.style.display = `flex`;
+
+  log(acc2);
+
+  if (acc2 === 2) {
+    doc.querySelector("#secondCar").style.cssText = " display: initial;";
+    doc.querySelector("#lastCar2").style.cssText = "display: none";
+  }
+  if (acc2 === 1) {
+    doc.querySelector("#firstCar").style.cssText = " display: initial;";
+    doc.querySelector("#lastCar1").style.cssText = "display: none";
+
+    leftArrow.style.display = `none`;
+  }
 };
 
 righttArrow.onclick = () => {
-  doc.querySelector("#lastCar").style.cssText = "  display: initial; ";
-  doc.querySelector("#firstCar").style.cssText = "display: none";
+  leftArrow.style.display = `flex`;
+  acc2 += 1;
+
+  if (acc2 === 2) {
+    doc.querySelector("#lastCar1").style.cssText = "  display: initial; ";
+    doc.querySelector("#firstCar").style.cssText = "display: none";
+  }
+  if (acc2 === 3) {
+    righttArrow.style.display = `none`;
+    doc.querySelector("#lastCar2").style.cssText = "  display: initial; ";
+    doc.querySelector("#firstCar").style.cssText = "display: none";
+    doc.querySelector("#secondCar").style.cssText = "display: none";
+  }
 };
 
 // ==================> for cars slideshow (Phone) <=====================
@@ -370,19 +398,24 @@ if (mediaQuery.matches) {
   righttArrow.onclick = () => {
     acc += 1;
     if (acc === 2) {
-      leftArrow.style.cssText = "display: initial";
+      leftArrow.style.cssText = "display: flex";
       doc.querySelector('[num="1"]').style.display = "none";
       doc.querySelector('[num="2"]').style.display = "initial";
     }
     if (acc === 3) {
-      leftArrow.style.cssText = "display: initial";
+      leftArrow.style.cssText = "display: flex";
       doc.querySelector('[num="2"]').style.display = "none";
       doc.querySelector('[num="3"]').style.display = "initial";
     }
     if (acc === 4) {
-      leftArrow.style.cssText = "display: initial";
+      leftArrow.style.cssText = "display: flex";
       doc.querySelector('[num="3"]').style.display = "none";
       doc.querySelector('[num="4"]').style.display = "initial";
+    }
+    if (acc === 5) {
+      leftArrow.style.cssText = "display: flex";
+      doc.querySelector('[num="4"]').style.display = "none";
+      doc.querySelector('[num="5"]').style.display = "initial";
 
       righttArrow.style.cssText = "display: none";
     }
@@ -390,27 +423,29 @@ if (mediaQuery.matches) {
   leftArrow.onclick = () => {
     acc -= 1;
     if (acc === 1) {
-      leftArrow.style.cssText = "display: initial";
+      leftArrow.style.cssText = "display: flex";
       doc.querySelector('[num="2"]').style.display = "none";
       doc.querySelector('[num="1"]').style.display = "initial";
 
       leftArrow.style.display = "none";
     }
     if (acc === 2) {
-      leftArrow.style.cssText = "display: initial";
+      leftArrow.style.cssText = "display: flex";
       doc.querySelector('[num="3"]').style.display = "none";
       doc.querySelector('[num="2"]').style.display = "initial";
     }
     if (acc === 3) {
-      leftArrow.style.cssText = "display: initial";
+      leftArrow.style.cssText = "display: flex";
       doc.querySelector('[num="4"]').style.display = "none";
       doc.querySelector('[num="3"]').style.display = "initial";
-      righttArrow.style.cssText = "display: initial";
     }
+
     if (acc === 4) {
-      leftArrow.style.cssText = "display: initial";
-      doc.querySelector('[num="4"]').style.display = "none";
-      doc.querySelector('[num="3"]').style.display = "initial";
+      leftArrow.style.cssText = "display: flex";
+      doc.querySelector('[num="5"]').style.display = "none";
+      doc.querySelector('[num="4"]').style.display = "initial";
+
+      righttArrow.style.cssText = "display: flex";
     }
   };
 }

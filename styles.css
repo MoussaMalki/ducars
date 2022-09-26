@@ -197,7 +197,7 @@ transition: 0.5s;
     left: 130px;
 }
 .buttons a:hover {
-   
+   background-color: var(--main-color);
     color: #eeeff1;
     transition: 0.6s;
 }
@@ -303,6 +303,12 @@ transition: 0.5s;
       padding-left: 5px;
       padding-top: 10px;
   }
+  #lastCar1 img {
+    width: 85% !important;
+  }
+  #lastCar2 img {
+    width: 93.5% !important;
+  }
   .car h3, .car p {
       margin-left: 5%;
       padding-bottom: 10px;
@@ -323,6 +329,7 @@ transition: 0.5s;
     text-align: center;
     border-radius: 15px;
     white-space: nowrap;
+    font-weight: 600;
  }
  .rentBtnDiv a:hover {
      background-color: var(--main-color);
@@ -331,7 +338,10 @@ transition: 0.5s;
 .day {
     color: #1b1b1b !important;
 }
-#lastCar {
+#lastCar1 {
+    display: none;
+}
+#lastCar2 {
     display: none;
 }
 .leftArrow, .rightArrow {
@@ -404,6 +414,7 @@ transition: 0.5s;
         font-weight: 600;
         border: none;
         padding: 2px 0;
+        cursor: pointer;
     }
     .send:hover {
         background-color: #1b1b1b;
@@ -444,18 +455,10 @@ transition: 0.5s;
        top: 10px;
    }
    .copyRight a{
-    color: #eeeff1;
+    font-weight: 600;
+    color: var(--main-color);
 }
-.copyRight i{
-    position: relative;
-    top: 1.5px;
-}
-.copyRight i:hover {
-    color: #fe5b3d;
-}
-.copyRight a:hover {
-    color: #fe5b3d;
-}
+
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 200px; /* Set the width of the sidebar */
@@ -518,8 +521,9 @@ transition: 0.5s;
     #menu-icon {
         display: initial;
         position: absolute;
-        top: 25px;
-        left: 88px;
+        top: 24px;
+        left: 50%;
+        transform: translate(-50%, 0);
 
     }
     .nav-bar {
@@ -543,7 +547,7 @@ transition: 0.5s;
         left: 0;
        }
        .socialMedia {
-        left: 0;
+        left: -5px;
        }
     .orangeCar {
         width: 100%;
@@ -687,7 +691,8 @@ transition: 0.5s;
        display: initial;
        position: absolute;
        top: 25px;
-       left: 88px;
+       left: 50%;
+       transform: translate(-50%, 0);
 
    }
    .nav-bar {
