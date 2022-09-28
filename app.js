@@ -129,7 +129,7 @@ function spanishSwitch() {
   for (i = 0; i < days.length; i++) {
     days[i].textContent = "/día";
     carBtn[i].textContent = `alquilar`;
-    doc.querySelectorAll(`.price`)[i].textContent = `30€`;
+    doc.querySelectorAll(`.price`)[i].textContent = `40€`;
   }
 
   // ====> contact
@@ -192,7 +192,7 @@ function arabicSwitch() {
   for (i = 0; i < days.length; i++) {
     days[i].textContent = "/يوم";
     carBtn[i].textContent = ` كــراء الان`;
-    doc.querySelectorAll(`.price`)[i].textContent = `300DH`;
+    doc.querySelectorAll(`.price`)[i].textContent = `400DH`;
   }
 
   // ====> contact
@@ -246,7 +246,7 @@ function englishSwitch() {
   for (i = 0; i < days.length; i++) {
     days[i].textContent = "/day";
     carBtn[i].textContent = `Rent Now`;
-    doc.querySelectorAll(`.price`)[i].textContent = `30$`;
+    doc.querySelectorAll(`.price`)[i].textContent = `40$`;
   }
   // ====> contact
 
