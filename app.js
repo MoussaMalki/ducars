@@ -51,6 +51,7 @@ let flagPic = doc.querySelector(".flag");
 
 selectLang.onclick = () => {
   if (selectLang.value === "AR") {
+    location.reload();
     flagPic.setAttribute("src", "images/Morocco-Flag.png");
     flagPic.setAttribute("alt", "MR");
     localStorage.setItem("currentLang", "AR");
@@ -58,6 +59,7 @@ selectLang.onclick = () => {
     arabicSwitch();
   }
   if (selectLang.value === "SP") {
+    location.reload();
     flagPic.setAttribute("src", "images/Flag-spain.png");
     localStorage.setItem("currentLang", "SP");
     localStorage.setItem("currentLangImg", "images/Flag-spain.png");
@@ -65,6 +67,7 @@ selectLang.onclick = () => {
     spanishSwitch();
   }
   if (selectLang.value === "EN") {
+    location.reload();
     flagPic.setAttribute("src", "images/us-flag.png");
     localStorage.setItem("currentLang", "EN");
     localStorage.setItem("currentLangImg", "images/us-flag.png");
