@@ -459,5 +459,14 @@ socials[1].onclick = () => {
   location.href = `https://wa.me/+212611742301`;
 };
 socials[2].onclick = () => {
-  location.href = `https://www.instagram.com/du_cars7/`;
+  location.href = `https://www.instagram.com/dusseldolf_cars_d/?hl=en`;
+};
+
+let mapHover = doc.querySelector(`.icons`).children[0];
+
+mapHover.onmouseover = () => {
+  doc.querySelector(`#mapPic`).style.cssText = `display: initial`;
+};
+mapHover.onmouseout = () => {
+  doc.querySelector(`#mapPic`).style.cssText = `display: none`;
 };

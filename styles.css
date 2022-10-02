@@ -424,7 +424,7 @@ transition: 0.5s;
     .icons {
         width: 300px;
         height: 400px;
-  
+        position: relative;
          display: flex;
         justify-content: center;
          flex-direction: column;
@@ -439,7 +439,17 @@ transition: 0.5s;
      position: relative;
      bottom: 10px;
     }
-
+    .icons  a {
+        color: var(--text-color);
+    }
+    .icons img {
+        position: absolute;
+        width: 80%;
+        border-radius: 15px;
+        border: solid var(--text-color) 2px;
+        top: -10vh;
+        display: none;
+    }
     /* .icons h3 {
         display: inline-block;
     } */
