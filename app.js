@@ -51,7 +51,6 @@ let flagPic = doc.querySelector(".flag");
 
 selectLang.onclick = () => {
   if (selectLang.value === "AR") {
-    location.reload();
     flagPic.setAttribute("src", "images/Morocco-Flag.png");
     flagPic.setAttribute("alt", "MR");
     localStorage.setItem("currentLang", "AR");
@@ -59,7 +58,6 @@ selectLang.onclick = () => {
     arabicSwitch();
   }
   if (selectLang.value === "SP") {
-    location.reload();
     flagPic.setAttribute("src", "images/Flag-spain.png");
     localStorage.setItem("currentLang", "SP");
     localStorage.setItem("currentLangImg", "images/Flag-spain.png");
@@ -67,7 +65,6 @@ selectLang.onclick = () => {
     spanishSwitch();
   }
   if (selectLang.value === "EN") {
-    location.reload();
     flagPic.setAttribute("src", "images/us-flag.png");
     localStorage.setItem("currentLang", "EN");
     localStorage.setItem("currentLangImg", "images/us-flag.png");
@@ -75,22 +72,6 @@ selectLang.onclick = () => {
     englishSwitch();
   }
 };
-
-if (localStorage.getItem("currentLang") !== null) {
-  selectLang.value = localStorage.getItem("currentLang");
-  let imgSrc = localStorage.getItem("currentLangImg");
-  flagPic.setAttribute("src", imgSrc);
-
-  if (selectLang.value === "AR") {
-    arabicSwitch();
-  }
-  if (selectLang.value === "EN") {
-    englishSwitch();
-  }
-  if (selectLang.value === "SP") {
-    spanishSwitch();
-  }
-}
 
 /// ====> changing language to spanish
 
